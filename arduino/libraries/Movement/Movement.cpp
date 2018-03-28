@@ -22,11 +22,11 @@ Movement::Movement(byte rightSpeedPin, byte rightDirectionA, byte rightDirection
  *	Sets forward motion at speed, args are for left and right tread speed
  **/
 void Movement::forward(byte leftSpeed, byte rightSpeed) {
-    digitalWrite(_leftDirectionA, LOW);
+    digitalWrite(_leftDirectionA, LOW); //NK- Changed value fromt LOW to HIGH
     digitalWrite(_leftDirectionB, HIGH);
     analogWrite(_leftSpeedPin, leftSpeed);
     digitalWrite(_rightDirectionA, HIGH);
-    digitalWrite(_rightDirectionB, LOW);
+    digitalWrite(_rightDirectionB, LOW);//NK- Changed value fromt LOW to HIGH
     analogWrite(_rightSpeedPin, rightSpeed);
 }
 
